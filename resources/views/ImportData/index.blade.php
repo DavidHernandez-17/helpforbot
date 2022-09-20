@@ -1,9 +1,6 @@
 @extends('Shared.layout')
 
 @section('content')
-<?php
-    ini_set('max_execution_time', 400);
-?>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-12">
