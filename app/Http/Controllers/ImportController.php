@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Structures\importCobroIncapacidades_GH;
 use App\Http\Controllers\Structures\importEstadoEmpleados_GH;
 use App\Http\Controllers\Structures\importSendinblue;
 use App\Models\MasterTable;
@@ -35,11 +36,11 @@ class ImportController extends Controller
                 return response('Importación en EstadoEmpleados_GH', 200);
                 break;
             case 'CobroIncapacidades_GH':
-                $import = new importEstadoEmpleados_GH();
-                $import->EstadoEmpleados_GH($request);
-                return response('Importación en EstadoEmpleados_GH', 200);
-                break;     
-                
+                $import = new importCobroIncapacidades_GH();
+                $import->CobroIncapacidades_GH($request);
+                return response('Importación en CobroIncapacidades_GH', 200);
+                break;
+
             default: 
             return response('Importación no realizada', 400);
         }
