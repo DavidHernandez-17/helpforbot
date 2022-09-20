@@ -99,14 +99,32 @@ class ImportController extends Controller
                 $datos = explode(";", $linea);
                 $cedula = $datos[0];
                 $nombreEmpleado = $datos[1];
-                $isActive = $datos[2];             
+                $isActive = $datos[2];
+                
+                $cedulaDuplicate = EstadoEmpleados_GH::where('cedula', $cedula)->get();
+
+                //Si no existe cédula, realiza inserción en BD
+                if (sizeof($cedulaDuplicate) == 0) {
+                    $registro = new EstadoEmpleados_GH();
+                    $registro->cedula = $cedula;
+                    $registro->nombreEmpleado = $nombreEmpleado;
+                    $registro->isActive = $isActive;
+                    $registro->save(); 
+                }
+                else
+                {
+                    //Recorro las cedulas existentes en la BD para luego buscar y actualizar.
+                    foreach( $cedulaDuplicate as $cedula )
+                    {
+                        $id = $cedula->id;
+                    }
                     
-                $registro = new EstadoEmpleados_GH();
-                $registro->cedula = $cedula;
-                $registro->nombreEmpleado = $nombreEmpleado;
-                $registro->isActive = $isActive;
-                $registro->save();
-                                
+                    //Busco y actualizo campo isActive en BD 
+                    $updateRegistro = EstadoEmpleados_GH::find($id);
+                    $updateRegistro->isActive = $isActive;
+                    $updateRegistro->save();
+                }                    
+                              
             }
 
             return response('', 200);

@@ -1,7 +1,9 @@
 @extends('Shared.layout')
 
 @section('content')
-
+<?php
+    ini_set('max_execution_time', 400);
+?>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-12">
@@ -22,12 +24,12 @@
                             </div>
 
                             <div class="col-md-6">
-                                <input class="form-control mt-3" accept="" id="importFile" type="file">
-                                <span class="text-secondary">.xlsx</span>
+                                <input class="form-control mt-3" accept=".CSV" id="importFile" type="file">
+                                <span class="text-secondary">.csv</span>
                             </div>
 
                         </div>
-                        <div>
+                        <div class="mb-2">
                             <button type="button" id="btnImport" class="btn btn-outline-primary">Importar a base de datos</button>
                         </div>
                     </form>
