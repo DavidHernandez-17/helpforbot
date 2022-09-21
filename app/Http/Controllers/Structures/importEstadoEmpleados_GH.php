@@ -18,7 +18,7 @@ class importEstadoEmpleados_GH extends Controller
             foreach($lineas as $linea)
             {
 
-                $datos = explode(";", $linea);
+                $datos = explode(",", $linea);
                 $cedula = $datos[0];
                 $nombreEmpleado = $datos[1];
                 $isActive = $datos[2];
