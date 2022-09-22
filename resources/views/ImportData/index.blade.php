@@ -11,13 +11,8 @@
                 <div class="card-body" style="margin-bottom: 10px;">
                     <form id="importForm" class="container" enctype="multipart/form-data">
                         <div class="row mb-3">
-                            <div class="col-md-6">
-                                <select id="selectTable" class="form-control mt-3" required>
-                                    <option value="null">Selecciona una tabla</option>
-                                    @foreach( $Tablas as $Tabla )
-                                    <option value="{{ $Tabla->name }}">{{ $Tabla->name }}</option>
-                                    @endforeach
-                                </select>
+                            <div class="col-md-6 mt-3">
+                                <input type="text" id="selectTable" name="table_search" class="form-control" placeholder="Buscar">
                             </div>
 
                             <div class="col-md-6">

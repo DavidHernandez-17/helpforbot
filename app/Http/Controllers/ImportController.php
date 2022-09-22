@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Structures\importCobroIncapacidades_GH;
 use App\Http\Controllers\Structures\importEstadoEmpleados_GH;
 use App\Http\Controllers\structures\importGarantiasLimitadas_Admon;
+use App\Http\Controllers\Structures\importGarantiasLimitadas_bitacora_Admon;
 use App\Http\Controllers\Structures\importSendinblue;
 use App\Models\MasterTable;
 use Illuminate\Http\Request;
@@ -45,6 +46,11 @@ class ImportController extends Controller
                 $import = new importGarantiasLimitadas_Admon();
                 $import->GarantiasLimitadas_Admon($request);
                 return response('Importación en GarantiasLimitadas_Admon', 200);
+                break;
+            case 'GarantiasLimitadasBitacora':
+                $import = new importGarantiasLimitadas_bitacora_Admon();
+                $import->GarantiasLimitadas_bitacora($request);
+                return response('Importación en GarantiasLimitadasBitacora', 200);
                 break;
     
 
