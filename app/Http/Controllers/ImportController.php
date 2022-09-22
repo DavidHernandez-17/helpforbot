@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Structures\importCobroIncapacidades_GH;
 use App\Http\Controllers\Structures\importEstadoEmpleados_GH;
-use App\Http\Controllers\structures\importGarantiasLimitadas_Admon;
+use App\Http\Controllers\Structures\importGarantiasLimitadas_Admon;
 use App\Http\Controllers\Structures\importGarantiasLimitadas_bitacora_Admon;
 use App\Http\Controllers\Structures\importSendinblue;
 use App\Models\MasterTable;
