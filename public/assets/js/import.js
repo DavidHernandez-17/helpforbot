@@ -8,9 +8,7 @@ function importar() {
     let importFile = document.getElementById('importFile');
     let nameTable = document.getElementById('selectTable').value;
     let file = importFile.files[0];
-    
-    console.log(nameTable);
-    
+        
     let data = new FormData();
     data.append("importFile", file);
     data.append("nameTable", nameTable);
