@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class importCapacitaciones_GH extends Controller
 {
+
     public function Capacitaciones_GH($file)
     {
         if($file)
@@ -92,4 +93,5 @@ class importCapacitaciones_GH extends Controller
 
         return response('', 400);
     }
+    
 }
