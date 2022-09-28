@@ -8,6 +8,7 @@ use App\Http\Controllers\Structures\ImportEncuestaRetiro_GH;
 use App\Http\Controllers\Structures\importEstadoEmpleados_GH;
 use App\Http\Controllers\Structures\importGarantiasLimitadas_Admon;
 use App\Http\Controllers\Structures\importGarantiasLimitadas_bitacora_Admon;
+use App\Http\Controllers\Structures\importProvisionPersonal_GH;
 use App\Http\Controllers\Structures\importSendinblue;
 use App\Models\MasterTable;
 use Illuminate\Http\Request;
@@ -63,6 +64,11 @@ class ImportController extends Controller
                 $import = new ImportEncuestaRetiro_GH();
                 $import->EncuestaRetiro_GH($request);
                 return response('Importación en EncuestaRetiro_GH', 200);
+                break;
+            case 'ProvisionPersonal_GH':
+                $import = new importProvisionPersonal_GH();
+                $import->ProvisionPersonal_GH($request);
+                return response('Importación en ProvisionPersonal_GH', 200);
                 break;
     
 
