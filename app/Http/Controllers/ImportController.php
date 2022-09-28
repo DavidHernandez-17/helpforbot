@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Structures\importCapacitaciones_GH;
 use App\Http\Controllers\Structures\importCobroIncapacidades_GH;
 use App\Http\Controllers\Structures\importEstadoEmpleados_GH;
 use App\Http\Controllers\Structures\importGarantiasLimitadas_Admon;
@@ -51,6 +52,11 @@ class ImportController extends Controller
                 $import = new importGarantiasLimitadas_bitacora_Admon();
                 $import->GarantiasLimitadas_bitacora($request);
                 return response('Importación en GarantiasLimitadasBitacora', 200);
+                break;
+            case 'Capacitaciones_GH':
+                $import = new importCapacitaciones_GH();
+                $import->Capacitaciones_GH($request);
+                return response('Importación en Capacitaciones_GH', 200);
                 break;
     
 
