@@ -18,7 +18,7 @@ class ImportEncuestaRetiro_GH extends Controller
 
             foreach($lineas as $linea)
             {
-                $datos = explode(",", $linea);
+                $datos = explode("	", $linea);
 
                 $id = $datos[0];
                 $anio = $datos[1];

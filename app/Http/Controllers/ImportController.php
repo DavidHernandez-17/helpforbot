@@ -45,7 +45,7 @@ class ImportController extends Controller
                 $import->CobroIncapacidades_GH($request);
                 return response('Importación en CobroIncapacidades_GH', 200);
                 break;
-            case 'GarantiasLimitadas_Admon':
+            case 'GarantiasLimitadasAseguradoras':
                 $import = new importGarantiasLimitadas_Admon();
                 $import->GarantiasLimitadas_Admon($request);
                 return response('Importación en GarantiasLimitadas_Admon', 200);

@@ -16,8 +16,8 @@
                             </div>
 
                             <div class="col-md-6">
-                                <input class="form-control mt-3" accept=".CSV" id="importFile" type="file">
-                                <span class="text-secondary">.csv</span>
+                                <input class="form-control mt-3" accept=".CSV, .tsv" id="importFile" type="file">
+                                <span class="text-secondary">.csv .tsv</span>
                             </div>
 
                         </div>
