@@ -8,6 +8,7 @@ use App\Http\Controllers\Structures\ImportEncuestaRetiro_GH;
 use App\Http\Controllers\Structures\importEstadoEmpleados_GH;
 use App\Http\Controllers\Structures\importGarantiasLimitadas_Admon;
 use App\Http\Controllers\Structures\importGarantiasLimitadas_bitacora_Admon;
+use App\Http\Controllers\Structures\importPerfilSociodemografico;
 use App\Http\Controllers\Structures\importProvisionPersonal_GH;
 use App\Http\Controllers\Structures\importSeleccion_GH;
 use App\Http\Controllers\Structures\importSendinblue;
@@ -74,7 +75,12 @@ class ImportController extends Controller
             case 'Seleccion_GH':
                 $import = new importSeleccion_GH();
                 $import->Seleccion_GH($request);
-                return response('Importación en ProvisionPersonal_GH', 200);
+                return response('Importación en Seleccion_GH', 200);
+                break;
+            case 'PerfilSociodemografico_GH':
+                $import = new importPerfilSociodemografico();
+                $import->PerfilSociodemografico_GH($request);
+                return response('Importación en PerfilSociodemografico_GH', 200);
                 break;
     
 
