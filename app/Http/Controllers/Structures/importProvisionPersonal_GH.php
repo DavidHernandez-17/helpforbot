@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Structures;
 
 use App\Http\Controllers\Controller;
 use App\Models\ProvisionPersonal_GH;
+use App\Models\ProvisionPersonalBitacora_GH;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class importProvisionPersonal_GH extends Controller
@@ -48,8 +50,10 @@ class importProvisionPersonal_GH extends Controller
                     
                     $registro->save(); 
                 }
+                //Else hace referencia a que existe duplicado
                 else
                 {
+
                     //Recorro las cedulas existentes en la BD para luego buscar y actualizar.
                     foreach( $duplicates as $duplicate )
                     {
@@ -70,6 +74,12 @@ class importProvisionPersonal_GH extends Controller
                     $updateRegistro->consecutivo = $consecutivo;
 
                     $updateRegistro->save();
+
+
+                    //Registro los datos de los empleados activos en la tabla bitacora
+                    $RegisterBitacora = new importProvisionPersonal_GH();
+                    ($retiro == '') ? $RegisterBitacora->RegisterTableBitacora($cedula, 'true') : $RegisterBitacora->RegisterTableBitacora($cedula, 'false');
+
                 }                    
                               
             }
@@ -79,6 +89,30 @@ class importProvisionPersonal_GH extends Controller
         }
 
         return response('', 400);
+    }
+
+    public function RegisterTableBitacora($cedula, $isActive)
+    {
+        $now = Carbon::now();
+
+        if( $isActive == 'true' )
+        {
+            $bitacora = new ProvisionPersonalBitacora_GH();
+            $bitacora->cedula = $cedula;
+            $bitacora->isActive = '1';
+            $bitacora->created_at = $now;
+            $bitacora->updated_at = $now;
+            $bitacora->save();
+        }
+        else{
+            $bitacora = new ProvisionPersonalBitacora_GH;
+            $bitacora->cedula = $cedula;
+            $bitacora->isActive = '0';
+            $bitacora->created_at = $now;
+            $bitacora->updated_at = $now;
+            $bitacora->save();
+        }
+
     }
 
 }
