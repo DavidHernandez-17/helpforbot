@@ -82,6 +82,11 @@ class ImportController extends Controller
                 $import->PerfilSociodemografico_GH($request);
                 return response('Importación en PerfilSociodemografico_GH', 200);
                 break;
+            case 'ConsolidadF_novedades':
+                $import = new importConsolidadoF_novedades;
+                $import->ConsolidadoF($request);
+                return response('Importación en ConsolidadF_novedades', 200);
+                break;
     
 
             default: 
