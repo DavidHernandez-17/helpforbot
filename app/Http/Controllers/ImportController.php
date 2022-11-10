@@ -8,6 +8,7 @@ use App\Http\Controllers\Structures\ImportEncuestaRetiro_GH;
 use App\Http\Controllers\Structures\importEstadoEmpleados_GH;
 use App\Http\Controllers\Structures\importGarantiasLimitadas_Admon;
 use App\Http\Controllers\Structures\importGarantiasLimitadas_bitacora_Admon;
+use App\Http\Controllers\Structures\ImportNegociosCerrados_Centro;
 use App\Http\Controllers\Structures\importPerfilSociodemografico;
 use App\Http\Controllers\Structures\importProvisionPersonal_GH;
 use App\Http\Controllers\Structures\importSeleccion_GH;
@@ -87,7 +88,12 @@ class ImportController extends Controller
                 $import->ConsolidadoF($request);
                 return response('Importación en ConsolidadF_novedades', 200);
                 break;
-    
+            case 'NegociosCerrados_Centro':
+                $import = new ImportNegociosCerrados_Centro;
+                $import->NegociosCerrados($request);
+                return response('Importación en NegociosCerrados_Centro', 200);
+                break;
+
 
             default: 
             return response('Importación no realizada', 400);
