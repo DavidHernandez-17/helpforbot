@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Structures;
 
+use App\Http\Controllers\Controller;
 use App\Models\ConsolidadoF_novedades;
 use Illuminate\Http\Request;
 
 class importConsolidadoF_novedades extends Controller
 {
-
     public function ConsolidadoF($file)
     {
         if($file)
@@ -130,5 +130,4 @@ class importConsolidadoF_novedades extends Controller
 
         return response('', 400);
     }
-
 }

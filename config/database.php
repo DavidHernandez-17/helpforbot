@@ -80,12 +80,12 @@ return [
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', 'localhost'),
-            'port' => env('DB_PORT', '1433'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'url' => '',
+            'host' => '10.1.1.110\ALBERTOALVAREZ',
+            'port' => '',
+            'database' => 'contabilidad',
+            'username' => 'desarrollo_aa',
+            'password' => '4Lb3rt0aa*',
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,

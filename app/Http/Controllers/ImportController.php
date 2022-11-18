@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Structures\importCapacitaciones_GH;
 use App\Http\Controllers\Structures\importCobroIncapacidades_GH;
+use App\Http\Controllers\Structures\importConsolidadoF_novedades;
 use App\Http\Controllers\Structures\ImportEncuestaRetiro_GH;
 use App\Http\Controllers\Structures\importEstadoEmpleados_GH;
 use App\Http\Controllers\Structures\importGarantiasLimitadas_Admon;
