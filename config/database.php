@@ -91,6 +91,19 @@ return [
             'prefix_indexes' => true,
         ],
 
+        'sqlsrv_cartelera' => [
+            'driver' => 'sqlsrv',
+            'url' => '',
+            'host' => 'agilecode-databases.database.windows.net',
+            'port' => '',
+            'database' => 'dbAlbertoAlvarezSIMI',
+            'username' => 'agilecode',
+            'password' => 'Agc$c0d3*',
+            'charset' => 'utf8',
+            'prefix' => '',
+            'prefix_indexes' => true,
+        ],
+
     ],
 
     /*

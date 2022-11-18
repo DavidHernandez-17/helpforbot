@@ -53,7 +53,6 @@ class Bitacora_InmArrendados extends Command
         //Consulta todos los registros de inmuebles arrendados actuales en bd sql server
         $inmArrendadosActuales = qInmArrendadosActuales::all();
 
-       
         
         foreach ($inmArrendadosActuales as $inmArrendadosActual) 
         {
