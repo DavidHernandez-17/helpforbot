@@ -14,7 +14,7 @@ class CreateSeguimientoAuxiliaresSdoSemestresTable extends Migration
     public function up()
     {
         Schema::create('seguimiento_auxiliares_sdo_semestres', function (Blueprint $table) {
-            $table->integer('id');
+            $table->string('id');
             $table->string('id_inmueble');
             $table->string('fecha_notificacion');
             $table->string('tipo_inmueble');

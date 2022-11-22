@@ -22,9 +22,7 @@ class ImportController extends Controller
 {
     public function index()
     {
-        return view('ImportData/index', [
-            'Tablas' => MasterTable::all()
-        ]);
+        return view('ImportData/index');
     }
 
 
