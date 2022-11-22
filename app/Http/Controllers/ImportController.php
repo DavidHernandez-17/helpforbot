@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Structures\desocupaciones\importSeguimientoAuxiliaresSdoSemestre2022;
 use App\Http\Controllers\Structures\importCapacitaciones_GH;
 use App\Http\Controllers\Structures\importCobroIncapacidades_GH;
 use App\Http\Controllers\Structures\importConsolidadoF_novedades;
@@ -93,6 +94,11 @@ class ImportController extends Controller
                 $import = new ImportNegociosCerrados_Centro;
                 $import->NegociosCerrados($request);
                 return response('Importación en NegociosCerrados_Centro', 200);
+                break;
+            case 'SeguimientoAuxiliares_Desocupaciones':
+                $import = new importSeguimientoAuxiliaresSdoSemestre2022;
+                $import->SeguimientoAuxiliares($request);
+                return response('Importación en SeguimientoAuxiliares_Desocupaciones', 200);
                 break;
 
 
