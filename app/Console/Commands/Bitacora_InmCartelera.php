@@ -47,7 +47,7 @@ class Bitacora_InmCartelera extends Command
         date_default_timezone_set("America/Bogota");
 
         //Fecha actual fecha y hora junta
-        $todayDateTime = date("Y-m-d");
+        $todayDateTime = date("Y-m-d H:i:s");
 
         //Contador
         $contador = 0;

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Structures\desocupaciones\importDesocupacionesAA;
 use App\Http\Controllers\Structures\desocupaciones\importSeguimientoAuxiliaresSdoSemestre2022;
 use App\Http\Controllers\Structures\importCapacitaciones_GH;
 use App\Http\Controllers\Structures\importCobroIncapacidades_GH;
@@ -15,6 +16,7 @@ use App\Http\Controllers\Structures\importPerfilSociodemografico;
 use App\Http\Controllers\Structures\importProvisionPersonal_GH;
 use App\Http\Controllers\Structures\importSeleccion_GH;
 use App\Http\Controllers\Structures\importSendinblue;
+use App\Models\Desocupaciones\DesocupacionesAA;
 use App\Models\MasterTable;
 use Illuminate\Http\Request;
 
@@ -98,7 +100,11 @@ class ImportController extends Controller
                 $import->SeguimientoAuxiliares($request);
                 return response('Importación en SeguimientoAuxiliares_Desocupaciones', 200);
                 break;
-
+            case 'Desocupaciones_AA':
+                $import = new importDesocupacionesAA();
+                $import->Desocupaciones($request);
+                return response('Importación en Desocupaciones_AA', 200);
+                break;
 
             default: 
             return response('Importación no realizada', 400);

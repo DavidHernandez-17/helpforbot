@@ -15,7 +15,13 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        // $schedule->command('Bitacora:InmCartelera')->timezone('America/Bogota')->monthlyOn(2, '8:00');
+        // $schedule->command('Bitacora:InmArrendadosActuales')->timezone('America/Bogota')->monthlyOn(2, '9:00');
+        
+        
+        $schedule->command('Bitacora:InmCartelera')->everyMinute();
+        $schedule->command('Bitacora:InmArrendadosActuales')->everyMinute();     
+        
     }
 
     /**
