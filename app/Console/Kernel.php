@@ -13,15 +13,11 @@ class Kernel extends ConsoleKernel
      * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
      * @return void
      */
+
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('Bitacora:InmCartelera')->timezone('America/Bogota')->monthlyOn(2, '8:00');
-        // $schedule->command('Bitacora:InmArrendadosActuales')->timezone('America/Bogota')->monthlyOn(2, '9:00');
-        
-        
-        $schedule->command('Bitacora:InmCartelera')->everyMinute();
-        $schedule->command('Bitacora:InmArrendadosActuales')->everyMinute();     
-        
+        $schedule->command('Bitacora:InmCartelera')->timezone('America/Bogota')->monthlyOn(1, '3:00');
+        $schedule->command('Bitacora:InmArrendadosActuales')->timezone('America/Bogota')->monthlyOn(1, '3:00');      
     }
 
     /**

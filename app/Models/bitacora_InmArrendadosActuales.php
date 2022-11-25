@@ -9,6 +9,11 @@ class bitacora_InmArrendadosActuales extends Model
 {
     use HasFactory;
 
+    protected $connection = 'mysql';
+
+    protected $table = 'bitacora__inm_arrendados_actuales';
+
+
     protected $fillable = [
         'Inmueble',
         'Direccion',
