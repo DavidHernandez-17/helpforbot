@@ -33,10 +33,9 @@ class importDesocupacionesAA extends Controller
                 $destino_llaves = $datos[11];
                 $anticipo_servicios_publicos = $datos[12];
                 $numero_contrato_epm = $datos[13];
-                $ciclo_epm = $datos[14];
-                $pendiente_pago_anticipo = $datos[15];
-                $pp_recibio = $datos[16];
-                $observacion_pp = $datos[17];
+                $pendiente_pago_anticipo = $datos[14];
+                $pp_recibio = $datos[15];
+                $fecha_recepcion_pp = $datos[16];
                 
                 $duplicates = DesocupacionesAA::where('id', $id)->get();
 
@@ -59,10 +58,9 @@ class importDesocupacionesAA extends Controller
                     $registro->destino_llaves = $destino_llaves;
                     $registro->anticipo_servicios_publicos = $anticipo_servicios_publicos;
                     $registro->numero_contrato_epm = $numero_contrato_epm;
-                    $registro->ciclo_epm = $ciclo_epm;
                     $registro->pendiente_pago_anticipo = $pendiente_pago_anticipo;
                     $registro->pp_recibio = $pp_recibio;
-                    $registro->observacion_pp = $observacion_pp;
+                    $registro->fecha_recepcion_pp = $fecha_recepcion_pp;
                     $registro->save();
                 }
                 else
@@ -90,10 +88,9 @@ class importDesocupacionesAA extends Controller
                     $updateRegistro->destino_llaves = $destino_llaves;
                     $updateRegistro->anticipo_servicios_publicos = $anticipo_servicios_publicos;
                     $updateRegistro->numero_contrato_epm = $numero_contrato_epm;
-                    $updateRegistro->ciclo_epm = $ciclo_epm;
                     $updateRegistro->pendiente_pago_anticipo = $pendiente_pago_anticipo;
                     $updateRegistro->pp_recibio = $pp_recibio;
-                    $updateRegistro->observacion_pp = $observacion_pp;
+                    $updateRegistro->fecha_recepcion_pp = $fecha_recepcion_pp;
                     $updateRegistro->save();
 
                 }                            

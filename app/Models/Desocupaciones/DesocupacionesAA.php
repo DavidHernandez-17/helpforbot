@@ -24,9 +24,8 @@ class DesocupacionesAA extends Model
         'destino_llaves',
         'anticipo_servicios_publicos',
         'numero_contrato_epm',
-        'ciclo_epm',
         'pendiente_pago_anticipo',
         'pp_recibio',
-        'observacion_pp',
+        'fecha_recepcion_pp',
     ];
 }

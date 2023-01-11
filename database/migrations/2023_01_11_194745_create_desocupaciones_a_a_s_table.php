@@ -28,10 +28,9 @@ class CreateDesocupacionesAASTable extends Migration
             $table->string('destino_llaves');
             $table->string('anticipo_servicios_publicos');
             $table->string('numero_contrato_epm');
-            $table->string('ciclo_epm');
             $table->string('pendiente_pago_anticipo');
             $table->string('pp_recibio');
-            $table->string('observacion_pp');
+            $table->string('fecha_recepcion_pp');
             $table->timestamps();
         });
     }

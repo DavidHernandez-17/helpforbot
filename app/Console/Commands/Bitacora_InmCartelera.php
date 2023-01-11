@@ -22,6 +22,7 @@ class Bitacora_InmCartelera extends Command
      * @var string
      */
     protected $description = 'Se encarga de registrar bitacora de todos los inmuebles en cartelera por mes.';
+    
 
     /**
      * Create a new command instance.
