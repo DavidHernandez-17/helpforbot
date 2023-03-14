@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class importSeleccion_GH extends Controller
 {
-    public function Seleccion_GH($file)
+    public function import($file)
     {
         if($file)    
         {

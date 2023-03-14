@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class importProvisionPersonal_GH extends Controller
 {
 
-    public function ProvisionPersonal_GH($file)
+    public function import($file)
     {
         if($file)    
         {

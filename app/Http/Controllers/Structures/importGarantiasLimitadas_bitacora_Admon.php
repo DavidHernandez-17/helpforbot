@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class importGarantiasLimitadas_bitacora_Admon extends Controller
 {
-    public function GarantiasLimitadas_bitacora($file)
+    public function import($file)
     {
         if($file)    
         {

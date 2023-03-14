@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class importCobroIncapacidades_GH extends Controller
 {
-    public function CobroIncapacidades_GH($file)
+    public function import($file)
     {
         if($file)    
         {

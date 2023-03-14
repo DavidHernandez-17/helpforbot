@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class importPerfilSociodemografico extends Controller
 {
-    public function PerfilSociodemografico_GH($file)
+    public function import($file)
     {
         if($file)
         {

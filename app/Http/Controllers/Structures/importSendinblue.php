@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class importSendinblue extends Controller
 {
-    public function importSendinblue($file)
+    public function import($file)
     {
         if($file)    
         {

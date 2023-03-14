@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 
 class importEstadoEmpleados_GH extends Controller
 {
-    public function EstadoEmpleados_GH($file)
+    public function import($file)
     {
-        if($file)    
+        if($file)
         {
             $archivotmp = $_FILES['importFile']['tmp_name'];
             $lineas = file($archivotmp);

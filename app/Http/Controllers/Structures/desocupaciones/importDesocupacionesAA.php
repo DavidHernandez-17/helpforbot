@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class importDesocupacionesAA extends Controller
 {
-    public function Desocupaciones($file)
+    public function import($file)
     {
         if($file)
         {

@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class ImportNegociosCerrados_Centro extends Controller
 {
-    public function NegociosCerrados($file)
+    public function import($file)
     {
         if($file)
         {

@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class importGarantiasLimitadas_Admon extends Controller
 {
-    public function GarantiasLimitadas_Admon($file)
+    public function import($file)
     {
         if($file)    
         {

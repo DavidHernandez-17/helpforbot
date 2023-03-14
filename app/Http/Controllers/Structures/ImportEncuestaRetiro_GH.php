@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class ImportEncuestaRetiro_GH extends Controller
 {
     
-    public function EncuestaRetiro_GH($file)
+    public function import($file)
     {
         if($file)
         {

@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class importConsolidadoF_novedades extends Controller
 {
-    public function ConsolidadoF($file)
+    public function import($file)
     {
         if($file)
         {

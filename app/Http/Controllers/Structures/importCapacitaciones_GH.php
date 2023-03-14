@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class importCapacitaciones_GH extends Controller
 {
 
-    public function Capacitaciones_GH($file)
+    public function import($file)
     {
         if($file)
         {

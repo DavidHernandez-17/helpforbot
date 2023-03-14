@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class importSeguimientoAuxiliaresSdoSemestre2022 extends Controller
 {
-    public function SeguimientoAuxiliares($file)
+    public function import($file)
     {
         if($file)
         {
